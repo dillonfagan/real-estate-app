@@ -1,3 +1,5 @@
+"use client";
+
 import { JSX, PropsWithChildren, useRef, useState } from "react";
 import { DrawerContext } from "./context";
 
@@ -7,6 +9,7 @@ export default function DrawerProvider({ children }: PropsWithChildren) {
 
   const open = (view: JSX.Element) => {
     setView(view);
+    toggleRef.current?.click();
   };
 
   const close = () => {

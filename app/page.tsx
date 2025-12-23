@@ -7,25 +7,25 @@ export default function Home() {
       imageUrl:
         "https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp",
       title: "Property Title 1",
-      bedrooms: 2,
-      bathrooms: 2,
-      price: 1_200,
+      bedrooms: 1,
+      bathrooms: 1,
+      price: 850,
     },
     {
       imageUrl:
         "https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp",
       title: "Property Title 2",
-      bedrooms: 2,
-      bathrooms: 2,
-      price: 1_200,
+      bedrooms: 1,
+      bathrooms: 1,
+      price: 875,
     },
     {
       imageUrl:
         "https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp",
       title: "Property Title 3",
       bedrooms: 2,
-      bathrooms: 2,
-      price: 1_200,
+      bathrooms: 1,
+      price: 1_000,
     },
     {
       imageUrl:
@@ -41,15 +41,15 @@ export default function Home() {
       title: "Property Title 5",
       bedrooms: 2,
       bathrooms: 2,
-      price: 1_200,
+      price: 1_250,
     },
     {
       imageUrl:
         "https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp",
       title: "Property Title 6",
-      bedrooms: 2,
+      bedrooms: 3,
       bathrooms: 2,
-      price: 1_200,
+      price: 1_500,
     },
   ];
 

@@ -7,11 +7,12 @@ interface Props {
   bedrooms: number;
   bathrooms: number;
   price: number;
+  onClick?: () => void;
 }
 
-export default function PropertyCard({ imageUrl, title, bedrooms, bathrooms, price }: Props) {
+export default function PropertyCard({ imageUrl, title, bedrooms, bathrooms, price, onClick }: Props) {
   return (
-    <div className="card bg-base-100 cursor-pointer shadow-sm hover:shadow-lg">
+    <div className="card bg-base-100 cursor-pointer shadow-sm hover:shadow-lg" onClick={onClick}>
       <figure>
         <img src={imageUrl} alt={title} />
       </figure>

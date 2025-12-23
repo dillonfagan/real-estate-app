@@ -2,12 +2,14 @@
 
 import { useDrawer } from "@/components/drawer/context";
 import PropertyCard from "@/components/property-card";
+import PropertyDetails from "@/components/property-details";
+import { Property } from "@/types/property";
 import { MagnifyingGlassIcon } from "@heroicons/react/16/solid";
 
 export default function Home() {
   const { open } = useDrawer();
 
-  const properties = [
+  const properties: Property[] = [
     {
       imageUrl:
         "https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp",
@@ -85,7 +87,7 @@ export default function Home() {
               bedrooms={property.bedrooms}
               bathrooms={property.bathrooms}
               price={property.price}
-              onClick={() => open(<div>{property.title}</div>)}
+              onClick={() => open(<PropertyDetails property={property} />)}
             />
           ))}
         </div>

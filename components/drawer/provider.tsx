@@ -33,7 +33,7 @@ export default function DrawerProvider({ children }: PropsWithChildren) {
             className="drawer-overlay"
             onClick={close}
           ></label>
-          <ul className="menu bg-base-200 min-h-full w-80 p-4">{View}</ul>
+          <div className="bg-base-200 min-h-full w-80">{View}</div>
         </div>
       </div>
     </DrawerContext.Provider>

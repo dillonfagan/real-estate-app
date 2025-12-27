@@ -1,4 +1,6 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# RedHouse
+
+This web app is inspired by a popular real estate broker's platform, but with a twist: What would it be like to browse a catalog of homes that your **cooperative** owns?
 
 ## Getting Started
 

@@ -15,7 +15,7 @@ export default function PropertyCard({ property, onClick }: Props) {
       onClick={onClick}
     >
       <figure>
-        <img src={imageUrl} alt={title} />
+        <img className="w-full h-48 object-cover" src={imageUrl} alt={title} />
       </figure>
       <div className="card-body">
         <h2 className="card-title">${numberFormatter.format(price)}</h2>

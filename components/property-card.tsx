@@ -10,17 +10,24 @@ interface Props {
 export default function PropertyCard({ property, onClick }: Props) {
   const { imageUrl, title, bedrooms, bathrooms, price, address } = property;
   return (
-    <div className="card bg-base-100 cursor-pointer shadow-sm hover:shadow-lg" onClick={onClick}>
+    <div
+      className="card bg-base-100 cursor-pointer shadow-sm hover:shadow-lg"
+      onClick={onClick}
+    >
       <figure>
         <img src={imageUrl} alt={title} />
       </figure>
       <div className="card-body">
         <h2 className="card-title">${numberFormatter.format(price)}</h2>
-        <div className="flex gap-3">
+        <div>
+          <div className="flex gap-3">
             <span>{pluralize({ word: "bed", count: bedrooms })}</span>
             <span>{pluralize({ word: "bath", count: bathrooms })}</span>
+          </div>
+          <p className="text-gray-400">
+            {address.street}, {address.city}, {address.state}
+          </p>
         </div>
-        <p className="text-gray-400">{address.street}, {address.city}, {address.state}</p>
       </div>
     </div>
   );

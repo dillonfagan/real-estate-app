@@ -16,11 +16,15 @@ export default function PropertyDetails({ property }: Props) {
         <h4 className="font-semibold text-xl">
           ${numberFormatter.format(price)}
         </h4>
-        <div className="flex gap-3">
-          <p>{pluralize({ count: bedrooms, word: "bed" })}</p>
-          <p>{pluralize({ count: bathrooms, word: "bath" })}</p>
+        <div>
+          <div className="flex gap-3">
+            <p>{pluralize({ count: bedrooms, word: "bed" })}</p>
+            <p>{pluralize({ count: bathrooms, word: "bath" })}</p>
+          </div>
+          <p className="text-gray-400">
+            {address.street}, {address.city}, {address.state}
+          </p>
         </div>
-        <p className="text-gray-400">{address.street}, {address.city}, {address.state}</p>
       </div>
     </div>
   );

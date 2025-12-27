@@ -18,7 +18,7 @@ export default function Home() {
       price: 850,
       address: {
         street: "101 Elderberry Ln",
-        city: "Springfield",
+        city: "Aurora",
         state: "IL"
       }
     },
@@ -89,8 +89,8 @@ export default function Home() {
   ];
 
   return (
-    <main className="min-h-screen drawer-content">
-      <div className="navbar bg-base-100 shadow-lg sticky top-0 z-10">
+    <div className="drawer-content">
+      <header className="navbar bg-base-100 shadow-lg sticky top-0 z-10">
         <div className="navbar-start">
           <button className="btn btn-ghost font-bold text-lg text-red-600">
             RedHouse
@@ -103,8 +103,8 @@ export default function Home() {
           </label>
         </div>
         <div className="navbar-end"></div>
-      </div>
-      <div className="grid grid-cols-2 p-4 gap-4">
+      </header>
+      <main className="grid grid-cols-2 p-4 gap-4">
         <div className="grid grid-cols-2 gap-4">
           <label className="hidden drawer-button" htmlFor="the-drawer" />
           {properties.map((property, index) => (
@@ -118,7 +118,7 @@ export default function Home() {
         <div className="overflow-hidden">
           <div className="card bg-base-100">Placeholder</div>
         </div>
-      </div>
-    </main>
+      </main>
+    </div>
   );
 }

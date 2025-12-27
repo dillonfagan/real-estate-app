@@ -1,16 +1,14 @@
+import { Property } from "@/types/property";
 import { numberFormatter } from "@/utils/format";
 import { pluralize } from "@/utils/pluralize";
 
 interface Props {
-  imageUrl: string;
-  title: string;
-  bedrooms: number;
-  bathrooms: number;
-  price: number;
+  property: Property;
   onClick?: () => void;
 }
 
-export default function PropertyCard({ imageUrl, title, bedrooms, bathrooms, price, onClick }: Props) {
+export default function PropertyCard({ property, onClick }: Props) {
+  const { imageUrl, title, bedrooms, bathrooms, price, address } = property;
   return (
     <div className="card bg-base-100 cursor-pointer shadow-sm hover:shadow-lg" onClick={onClick}>
       <figure>
@@ -22,6 +20,7 @@ export default function PropertyCard({ imageUrl, title, bedrooms, bathrooms, pri
             <span>{pluralize({ word: "bed", count: bedrooms })}</span>
             <span>{pluralize({ word: "bath", count: bathrooms })}</span>
         </div>
+        <p className="text-gray-400">{address.street}, {address.city}, {address.state}</p>
       </div>
     </div>
   );

@@ -11,20 +11,28 @@ export default function Home() {
 
   const properties: Property[] = [
     {
-      imageUrl:
-        "https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp",
+      imageUrl: "https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp",
       title: "Property Title 1",
       bedrooms: 1,
       bathrooms: 1,
       price: 850,
+      address: {
+        street: "101 Elderberry Ln",
+        city: "Springfield",
+        state: "IL"
+      }
     },
     {
-      imageUrl:
-        "https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp",
+      imageUrl: "https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp",
       title: "Property Title 2",
       bedrooms: 1,
       bathrooms: 1,
       price: 875,
+      address: {
+        street: "102 Elderberry Ln",
+        city: "Aurora",
+        state: "IL"
+      }
     },
     {
       imageUrl:
@@ -33,6 +41,11 @@ export default function Home() {
       bedrooms: 2,
       bathrooms: 1,
       price: 1_000,
+      address: {
+        street: "103 Elderberry Ln",
+        city: "Aurora",
+        state: "IL"
+      }
     },
     {
       imageUrl:
@@ -41,6 +54,11 @@ export default function Home() {
       bedrooms: 2,
       bathrooms: 2,
       price: 1_200,
+      address: {
+        street: "104 Elderberry Ln",
+        city: "Aurora",
+        state: "IL"
+      }
     },
     {
       imageUrl:
@@ -49,6 +67,11 @@ export default function Home() {
       bedrooms: 2,
       bathrooms: 2,
       price: 1_250,
+      address: {
+        street: "105 Elderberry Ln",
+        city: "Aurora",
+        state: "IL"
+      }
     },
     {
       imageUrl:
@@ -57,6 +80,11 @@ export default function Home() {
       bedrooms: 3,
       bathrooms: 2,
       price: 1_500,
+      address: {
+        street: "106 Elderberry Ln",
+        city: "Aurora",
+        state: "IL"
+      }
     },
   ];
 
@@ -82,11 +110,7 @@ export default function Home() {
           {properties.map((property, index) => (
             <PropertyCard
               key={index}
-              imageUrl={property.imageUrl}
-              title={property.title}
-              bedrooms={property.bedrooms}
-              bathrooms={property.bathrooms}
-              price={property.price}
+              property={property}
               onClick={() => open(<PropertyDetails property={property} />)}
             />
           ))}

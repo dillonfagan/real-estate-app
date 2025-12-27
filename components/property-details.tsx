@@ -7,7 +7,7 @@ interface Props {
 }
 
 export default function PropertyDetails({ property }: Props) {
-  const { title, price, bedrooms, bathrooms, imageUrl } = property;
+  const { title, price, bedrooms, bathrooms, imageUrl, address } = property;
   return (
     <div>
       <img src={imageUrl} alt={title} />
@@ -20,6 +20,7 @@ export default function PropertyDetails({ property }: Props) {
           <p>{pluralize({ count: bedrooms, word: "bed" })}</p>
           <p>{pluralize({ count: bathrooms, word: "bath" })}</p>
         </div>
+        <p className="text-gray-400">{address.street}, {address.city}, {address.state}</p>
       </div>
     </div>
   );

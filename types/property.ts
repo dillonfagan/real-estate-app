@@ -4,4 +4,11 @@ export type Property = {
     price: number;
     bedrooms: number;
     bathrooms: number;
+    address: Address;
+};
+
+export type Address = {
+    street: string;
+    city: string;
+    state: string;
 };

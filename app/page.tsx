@@ -1,9 +1,9 @@
 "use client";
 
-import { useDrawer } from "@/components/drawer/context";
-import PropertyCard from "@/components/property-card";
-import PropertyDetails from "@/components/property-details";
-import { Property } from "@/types/property";
+import { useDrawer } from "@/lib/components/drawer/context";
+import PropertyCard from "@/lib/components/property-card";
+import PropertyDetails from "@/lib/components/property-details";
+import { Property } from "@/lib/types/property";
 import { MagnifyingGlassIcon } from "@heroicons/react/16/solid";
 
 const properties: Property[] = [

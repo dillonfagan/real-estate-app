@@ -1,6 +1,6 @@
-import { Property } from "@/types/property";
-import { numberFormatter } from "@/utils/format";
-import { pluralize } from "@/utils/pluralize";
+import { Property } from "@/lib/types/property";
+import { numberFormatter } from "@/lib/utils/format";
+import { pluralize } from "@/lib/utils/pluralize";
 
 interface Props {
   property: Property;

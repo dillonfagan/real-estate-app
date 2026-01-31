@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import DrawerProvider from "@/components/drawer/provider";
+import DrawerProvider from "@/lib/components/drawer/provider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",

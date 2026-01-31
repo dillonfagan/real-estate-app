@@ -18,7 +18,7 @@ export default function PropertyCard({ property, onClick }: Props) {
         <img className="w-full h-48 object-cover" src={imageUrl} alt={title} />
       </figure>
       <div className="card-body">
-        <h2 className="card-title">${numberFormatter.format(price)}</h2>
+        <h2 className="card-title">${numberFormatter.format(price)}/month</h2>
         <div>
           <div className="flex gap-3">
             <span>{pluralize({ word: "bed", count: bedrooms })}</span>
